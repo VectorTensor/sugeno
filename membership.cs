@@ -57,9 +57,10 @@
         }
     } 
 
-    public (float, float, float) membership_values(float x)
+    public Tuple<float, float, float> membership_values(float x)
     {
-        return (left_shoulder_trapezoidal(x), middle_triangle(x),  right_shoulder_trapezoidal(x));
+        var values = Tuple.Create(left_shoulder_trapezoidal(x), middle_triangle(x), right_shoulder_trapezoidal(x));
+        return values;
     }
     
 }
